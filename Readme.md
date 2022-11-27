@@ -1,3 +1,10 @@
+## Chat / Messaging Application 
+
+Front end : HTML, CSS
+Back end ; Flask
+Database : MongoDB
+
+
 ## Pre-requisite : 
 MongoDB - Preferably version 6.0.1 running on port 27017
 
