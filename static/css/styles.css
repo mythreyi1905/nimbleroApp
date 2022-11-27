@@ -55,14 +55,22 @@
   p {
     margin: 24px 0;
   }
-  
+  .messages{
+    overflow-y: hidden;
+    height:80%;
+  }
+  .messages:hover{
+    overflow-y: auto;
+  }
   /* Cards */
   .card-wrapper {
-    margin: 0 auto;
+    margin: auto;
     padding: 90px 30px;
     flex-wrap: wrap;
     justify-content: center;
     display: flex;
+    align-items: center;
+    height:100vh;
   }
   
   .card {
@@ -72,6 +80,7 @@
     box-shadow: 0 8px 26px -4px rgba(0,0,0,0.15);
     border-radius: 5px;
     background: var(--white);
+    height:500px;
   }
   
   @media only screen and (max-width: 520px) {
@@ -125,6 +134,10 @@
   .field:focus {
     border-color: var(--grey-medium);
     outline: none;
+  }
+
+  .message-field {
+    height : 120px ;
   }
   
   .error {
