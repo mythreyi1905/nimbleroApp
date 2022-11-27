@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <h1> Dashboard</h1>
+{{ session['logged_in'] }}
+{{ session['user'] }}
+<div class="card-wrapper">
+<div class="card">
+<p class="center">You are currently logged in</p>
+<div class="center">
+    <a href ="/user/signout" class="btn btn--secondary">Sign Out</a>
+</div>
+</div>
+<!-- <div class="card">
+    <h2 class="center">Your Information</h2>
+    <p>
+    <strong>ID:</strong>{{ session['user']['_id'] }}<br>
+    <strong>Email:</strong>{{ session['user']['email'] }}<br>
+    <strong>Name:</strong>{{ session['user']['name'] }}
+    </p>
+</div> -->
+<div class="card">
+    <h1 class="center">Your messages</h1>
+    {%for m in messages%}
+    <li>{{m.message}}</li>
+    {%endfor%}
+</div>
+<div class="card">
+    <h1 class="center">Send a Message</h1>
+    
+    <form name="send_message_form">
+        <label for="email">Email</label>
+        <input type="email" name="email" class="field" required>
+
+        <label for="message">Message</label>
+        <input type="text" name="message" class="field" required>
+
+        <p class="error error-hidden">
+
+        </p>
+
+        <input type="submit" value="Send a Message" class="btn">
+
+    </form>
+</div>
+
+
+
+</div>
+
+
+
+ {% endblock %}
