@@ -1,9 +1,9 @@
 ## Chat / Messaging Application 
 
-Frontend : HTML, CSS
-Backend ; Flask
-Database : MongoDB
-Protocol : RESTful API
+- Frontend : HTML, CSS
+- Backend ; Flask
+- Database : MongoDB
+- Protocol : RESTful API
 
 
 ## Pre-requisite : 
