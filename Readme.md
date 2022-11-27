@@ -3,7 +3,7 @@ MongoDB - Preferably version 6.0.1 running on port 27017
 
 ## Steps to run: 
 
-In order to run this application locally, clone this repository on your machine and cd into `nimbleRobotics` 
+In order to run this application locally, clone this repository on your machine and cd into `nimbleroApp` 
 
 If you do not have virtualenv installed on your machine, install it using the following command: 
 
