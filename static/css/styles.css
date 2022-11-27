@@ -57,10 +57,12 @@
   }
   .messages{
     overflow-y: hidden;
+    overflow-x:hidden;
     height:80%;
   }
   .messages:hover{
     overflow-y: auto;
+    overflow-x:auto;
   }
   /* Cards */
   .card-wrapper {
@@ -81,6 +83,15 @@
     border-radius: 5px;
     background: var(--white);
     height:500px;
+  }
+  .message-item{
+    padding:10px;
+  }
+
+  .meta-messages{
+    font-size: small;
+    color: gray;
+    font-style: italic;
   }
   
   @media only screen and (max-width: 520px) {
@@ -189,3 +200,4 @@
     margin: 34px auto 24px;
     display: block;
   }
+

@@ -2,6 +2,9 @@ from flask import Flask,jsonify, request,session , redirect
 from passlib.hash import pbkdf2_sha256
 from app import db
 import uuid
+from datetime import datetime
+now = datetime.now() # current date and time
+
 class User:
 
     def login(self):
@@ -39,11 +42,15 @@ class User:
     def sendMessage(self):
         user = db.users.find_one({"email": request.form.get('email')})
         print(user)
+        date_time = now.strftime("%m/%d/%Y, %H:%M:%S")
         if user:
             message = {
             "_id":uuid.uuid4().hex,
             "email":request.form.get('email'),
-            "message":request.form.get('message')}
+            "message":request.form.get('message'),
+            "sender":session['user']['email'],
+            "timestamp":date_time
+            }
             db.messages.insert_one(message)
             return jsonify(message)
         return jsonify({"error":"Invalid user"}),401

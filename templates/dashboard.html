@@ -18,17 +18,21 @@
 <div class="card">
     <h1 class="center">Your messages</h1>
     <div class="messages">
-    {%for m in messages%}
-    <li>{{m.message}}</li>
-    {%endfor%}
-</div>
+        {%for m in messages%}
+        <div class="message-item">
+            <div>{{m.message}}</div>
+            <div class="meta-messages">{{m.sender}} {{m.timestamp}}</div>
+        </div>
+        {%endfor%}
+    </div>
+
 </div>
 <div class="card">
     <h1 class="center">Send a Message</h1>
     
     <form name="send_message_form">
         <label for="email">Email</label>
-        <input type="email" name="email" class="field" required>
+        <input type="email" name="email" class="field" placeholder="Enter a valid email address" required>
 
         <label for="message">Message</label>
         <!-- <input type="text" name="message" class="field message-field" required> -->
