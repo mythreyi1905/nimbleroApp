@@ -41,7 +41,6 @@ class User:
 
     def sendMessage(self):
         user = db.users.find_one({"email": request.form.get('email')})
-        print(user)
         date_time = now.strftime("%m/%d/%Y, %H:%M:%S")
         if user:
             message = {
@@ -60,8 +59,6 @@ class User:
         message = db.messages.find({"email": session['user']['email']})
         for i in message:
             messages.append(i)
-        print(messages)
-        print("Im here")
         return messages
     
         
